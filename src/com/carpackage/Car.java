@@ -53,6 +53,7 @@ public class Car {
 		this.price = price;
 	}
 	
+	@Override
 	public String toString() {
 		return String.format("%-10s %-10s %-10s $%s", make, model, year, price);
 	}

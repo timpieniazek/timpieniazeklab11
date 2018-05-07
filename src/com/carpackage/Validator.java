@@ -37,7 +37,7 @@ public class Validator {
 		String s = "";
 		boolean isValid = false;
 		while (!isValid) {
-			System.out.print(prompt);
+			System.out.printf(prompt);
 			s = sc.next(); // read user entry
 			if (s.equalsIgnoreCase("yes") || s.equalsIgnoreCase("y")) {
 				return "y";
@@ -51,5 +51,28 @@ public class Validator {
 		}
 		return s;
 		
+	}
+	
+	public static String getString(Scanner sc, String prompt) {
+		System.out.print(prompt);
+		String s = sc.next(); // read user entry
+		sc.nextLine(); // discard any other data entered on the line
+		return s;
+	}
+	
+	public static double getDouble(Scanner sc, String prompt) {
+		double d = 0;
+		boolean isValid = false;
+		while (isValid == false) {
+			System.out.print(prompt);
+			if (sc.hasNextDouble()) {
+				d = sc.nextDouble();
+				isValid = true;
+			} else {
+				System.out.println("Error! Invalid decimal value. Try again.");
+			}
+			sc.nextLine(); // discard any other data entered on the line
+		}
+		return d;
 	}
 }
