@@ -55,7 +55,7 @@ public class Car {
 	
 //	@Override
 	public String toString() {
-		return String.format("%8s %-10s %-8s $%.2f", make, model, year, price);
+		return String.format("%9s %-10s %-8s $%.2f", make, model, year, price);
 	}
 
 }
